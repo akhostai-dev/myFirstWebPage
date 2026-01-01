@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #15171e;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typography */
+h1, h2, h3, .oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition-duration: 200ms;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.subHeader {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.chapterHeader {
+    font-weight: 400;
+}
+
+.bolder {
+    font-weight: 400;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background: #15171e;
+    padding: 1rem;
+    z-index: 100;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 1rem;
+}
+
+/* Sections */
+section, 
+.section {
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Sticky chapter title */
+.chapterTitle {
+    position: sticky;
+    top: 4rem; /* below main header */
+    background: #15171e;
+    padding: 0.5rem 0;
+    z-index: 10;
+}
+
+/* Hero */
+.hero {
+    align-items: center;
+    text-align: center;
+}
+
+.scrollDisplay {
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
+.line {
+    width: 1px;
+    height: 4rem;
+    background: linear-gradient(to bottom, white, transparent);
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    height: 4rem;
+}
+
+/* Desktop */
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+}
